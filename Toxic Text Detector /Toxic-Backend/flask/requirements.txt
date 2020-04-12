@@ -1,0 +1,11 @@
+Click==7.0
+Flask==1.1.1
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+uWSGI==2.0.18
+Werkzeug==0.16.0
+numpy==1.18.2 
+Keras==2.3.1               
+Keras-Applications==1.0.8               
+Keras-Preprocessing==1.1.0

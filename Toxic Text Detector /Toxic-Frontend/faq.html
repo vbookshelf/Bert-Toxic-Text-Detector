@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+<meta charset="utf-8">
+<title>About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--CSS Stylesheets-->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/woza.css">
+
+<!--Link to Font Awesome icons-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+
+
+<!--Link to fonts from google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" type="image/png" href="robotfavicon.png">
+
+</head>
+
+
+
+
+
+
+<body class="bground-color">
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content. -->
+
+<div style="max-width:1500px">
+<!-- 1. HOME PAGE TAB -->
+<div class="w3-animate-opacity w3-padding w3-margin-bottom bground-color">
+	
+
+	
+
+
+<!-- 960 width region -->
+<div class='w3-content w3-padding w3-white' style="max-width:960px">
+	
+
+
+
+<div class="w3-center title adjust-fontcolor logo w3-center w3-margin">
+	
+	<img class='w3-round' src="assets/robot.jpg" alt="robot" height='200' width='200'>
+	
+</div>
+
+
+<!-- Top Bar -->
+<div class='w3-center'>
+	
+	<p class="space-letters w3-tag bground-color w3-text-teal w3-border w3-round">
+		<a href="index.html"><i class="fa fa-angle-double-left" style="font-size:20px"></i><b>Go back to the future...</b></a>
+</div>
+	
+
+
+
+<div class='bottom-margin'>
+	
+	
+	<!-- Start of block -->
+	<div class='side-margin1 w3-round text-color space-letters 
+	w3-margin-bottom'>
+	
+			<p class='w3-text-pink topp-margin'><b>Design Status</b></p>
+			
+			<p>This is a prototype.</p>
+			
+			
+			<p class='w3-text-pink topp-margin'><b>Purpose</b></p>
+			
+			<p>This is a tool to automatically monitor text for toxicity. It's powered by the <a href="https://arxiv.org/abs/1810.04805" target='_blank' class="w3-text-blue">Bert</a> artificial intelligence language model that Google created.</p>
+			
+			<p>This is a cloud based microservice. Text like forum comments and customer feedback can be automatically sent to the model for analysis. The model will respond by returning a toxic probability score.</p>
+			
+			<p><b>API Endpoint</b>: http://139.59.50.72/predict</p>
+			
+			
+			
+			
+
+			
+			<p class='w3-text-pink topp-margin'><b>Limitations</b></p>
+			
+			<p>- The model's prediction accuracy has not been field tested. Also, it's prediction speed needs to be optimized.</p>
+			
+			<p>- To improve reliability, this prototype is running on two load-balanced servers. Each has 2 vCPU's and 4GB of RAM. This backend setup has not been stress tested.</p>
+			
+			<p>- This demo site will be live until mid May 2020.</p>
+			
+
+			<p class='w3-text-pink topp-margin'><b>Published Design</b></p>
+			
+			<p>The design code and the step-by-step process used to fine tune the model has been published on Kaggle. You can find the open source notebook <a href="https://www.kaggle.com/vbookshelf/bert-as-a-microservice-flask-app" target='_blank' class="w3-text-blue">here</a>.</p>
+			
+			
+			<p class='w3-text-pink topp-margin'><b>Dataset Licence</b></p>
+			
+			<p>The model was fine tuned using <a href="https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification" target='_blank' class="w3-text-blue">data</a> made available during the Kaggle Jigsaw Multilingual Toxic Comment Classification compeition. The data is licenced for any use.</p>
+			
+			<hr>
+			
+			
+			
+		
+	</div>
+	<!-- End of block -->
+	
+</div>
+
+
+
+
+
+</div><!-- End of 960 width region -->
+
+<!-- Bottom Bar -->
+<div class='w3-center w3-margin-top'>
+<p class="space-letters"><a class="w3-small w3-hover-text-deep-orange text-color" href="https://woza.work/">
+		<b>woza.work</b></a>
+	</p>
+</div>
+
+
+
+</div><!--END OF HOME PAGE TAB-->
+</div> <!-- w3-content -->
+</body>
+</html>
+

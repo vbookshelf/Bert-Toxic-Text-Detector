@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Bert Toxic Text Detector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ai microservice that uses the Bert laguage model
+to detect toxic text in multiple languages.">
+
+
+
+<!--CSS Stylesheets-->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/toxic.css">
+
+<!--Link to Font Awesome icons-->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+
+
+
+<!--Link to fonts from google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+<link rel="shortcut icon" type="image/png" href="robotfavicon.png">
+
+
+<style>
+html,body,h2,h3,h4,p,h5,li {font-family: Roboto, sans-serif}
+</style>
+
+
+</head>
+
+
+
+
+<body class="bground-color">
+
+
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content. -->
+<div class="w3-content" style="max-width:960px">
+
+
+
+<!-- 1. HOME PAGE -->
+<div class="tabbed w3-animate-opacity w3-white" id="home">
+	
+	
+<!-- Top Bar -->
+<div class='w3-center'>
+	
+	<p class="space-letters-large w3-small w3-tag bground-color w3-text-teal w3-border w3-round">
+		<a class="change-size" href="faq.html"><b>About this Microservice</b></a>
+</div>
+
+<!-- Title -->
+<div class='w3-center'>
+
+	<p class="hide top-font space-letters-large w3-round w3-text-black">
+		<b>Toxic Text Detector</b><br>
+		<span class="info-font w3-text-white w3-tag w3-round w3-blue">
+			<b>Ai Microservice</b></span></p>
+			
+			<p class="hide info-font w3-text-white w3-tag w3-round w3-blue">
+			<b>Ai Microservice</b></p>
+		
+		
+</div>
+
+
+
+<!-- Text Box -->
+<div class="w3-center side-margin w3-round
+text-color space-letters dont-break-out">
+
+<textarea id="name-input" class='w3-opacity top-font2 w3-padding w3-pale-blue w3-border-blue space-letters' placeholder="Please type your text here. Then click the orange button.">
+</textarea>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Button -->
+<div id="btnn" class="w3-center">
+	
+	<button id="name-button" class="w3-btn w3-deep-orange w3-hover-blue w3-round w3-margin-bottom btn-font w3-padding space-letters-large w3-text-white"><i class="fa fa-th w3-padding-right"></i>
+		<b>Toxic Text Detector</b></button>
+	<!--<p class="w3-text-teal">jpeg or png</p>-->
+</div> 
+
+
+
+
+
+
+
+<!-- Progress Bar 
+Just here for graphics.
+The functionality was not implemented because it slows down the model download 
+and causes it to fail.-->
+<div class="w3-light-grey side-margin w3-opacity">
+<div  id="myBar" class="w3-container w3-blue" style="height:5px;width:100%"></div>
+</div>
+
+
+<!-- Results Box -->
+<div class="w3-center w3-padding-top w3-border add-margin side-margin w3-round w3-sand
+text-color space-letters bottom-margin dont-break-out">
+
+	
+	<p class='top-font w3-text-blue space-letters' id="greeting">0%</p>
+	<p class='top-font2'>Toxic Probability</p>
+		
+</div>
+
+
+
+<!-- Bottom Bar -->
+<div class='w3-center w3-padding-bottom'>
+	<p class="space-letters">
+		<a class="w3-small w3-hover-text-deep-orange text-color" href="https://woza.work/">
+		<b>woza.work</b></a>
+	</p>
+</div>
+
+
+</div><!--END OF HOME PAGE-->
+
+
+
+
+
+<!--===================================-->
+
+<!-- Load JQuery-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	// Script by Deeplizard
+	//  *** Browse to: http://127.0.0.1:5000/static/hello.html ***
+
+
+    $("#name-button").click(function(event){
+        let message = {
+			// get the text that the user submitted
+            name: $("#name-input").val()
+        }
+		console.log(message);
+		
+		// Convert the message to json so it can be sent across the web.
+		console.log(JSON.stringify(message));
+		
+		// the http address is the address of the mac (local computer)
+        $.post("http://139.59.50.72/predict", JSON.stringify(message), function(response){
+			
+			// puts the greeting into the html on the webpage
+            $("#greeting").text(response.greeting);
+			
+			// print the response as received from the server
+            console.log(response);
+			
+			// Print the greeting from the key/value pair in the response.
+			// response.greeting extracts the value from the key/value pair in
+			// the json response.
+			console.log(response.greeting);
+			
+        });
+    });
+	
+// Browse to: http://127.0.0.1:5000/static/hello.html
+</script>
+	
+	
+	
+	
+	
+</div> <!-- w3-content -->
+
+</body>
+</html>
+
