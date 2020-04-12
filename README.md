@@ -23,4 +23,4 @@ https://www.kaggle.com/vbookshelf/bert-as-a-microservice-flask-app
 The model was fine tuned using data made available during the Kaggle Jigsaw Multilingual Toxic Comment Classification compeition. The data is licenced for any use.<br>
 https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification
 
-All the frontend and backend code is available in this repo.
+All the frontend and backend code is available in this repo. The model is not included because it was too large to upload. It can be downloaded by following the Kaggle notebook link above. Please put the model inside the subfolder called 'flask' before uploading the entire Toxic Comment Dtector folder to your server.
