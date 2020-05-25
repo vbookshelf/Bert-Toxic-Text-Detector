@@ -1,7 +1,8 @@
 ## Bert-Toxic-Text-Detector
 A flask web app that demonstrates a method to use the Bert language model as an Ai microservice.
 
-Live Web App: http://toxic.test.woza.work/
+The demo app is now offline.
+Demo App: http://toxic.test.woza.work/
 
 <br>
 
