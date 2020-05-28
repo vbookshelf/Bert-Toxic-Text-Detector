@@ -25,3 +25,12 @@ The model was fine tuned using data made available during the Kaggle Jigsaw Mult
 https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification
 
 All the frontend and backend code is available in this repo. The model is not included because it was too large to upload. It can be downloaded by following the Kaggle notebook link above. Please put the model inside the subfolder called 'flask' before uploading the entire Toxic Comment Detector folder to your server.
+
+### Server Deployment
+
+The code is set up to be run as a Docker container. It's based on this video tutorial:
+
+Julian Nash docker and flask video tutorial<br>
+https://www.youtube.com/watch?v=dVEjSmKFUVI
+
+The .dockerignore file may not be visible. Please create this file if you don't see it. I suggest that you deploy on a Linux server running Ubuntu 16.04. In this repo I've included a pdf that explains the steps for installing Docker and Docker Compose on a Linux server. 
