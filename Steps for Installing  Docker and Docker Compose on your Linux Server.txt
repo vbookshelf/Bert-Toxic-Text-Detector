@@ -1,0 +1,115 @@
+Steps for Installing 
+Docker and Docker Compose 
+on your Linux Server
+
+
+
+
+1. First, be sure to choose Ubuntu 16.04 when launching your server.
+2. Only copy and paste the lines that start with the dollar ($) sign.
+3. Don’t copy the $ symbol or the > symbol from the code below.
+
+
+
+
+How to install Docker
+
+
+Udemy Free Docker Essentials Course
+Section 1
+Lesson 7: Demo - Installing Docker on Linux
+https://www.udemy.com/course/docker-essentials/
+
+
+
+1. Update the server.
+$ sudo apt-get update
+
+
+2. Install the pre-requisites
+(Copy a line. Paste it. Press enter. Copy and paste the next line.)
+
+
+$ sudo apt-get install \
+> apt-transport-https \
+> ca-certificates \
+> curl \
+> software-properties-common
+
+
+3. Download gpg key for docker and add it to our machine
+fsSL keeps the result as small as OK.
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+
+4. Verify the key
+The last eight characters of the fingerprint should match 0EBFCD88.
+$ sudo apt-key fingerprint 0EBFCD88
+
+
+
+5. Create a repository (called ‘stable’) and add to it.
+(Copy a line. Paste it. Press enter. Copy and paste the next line.)
+
+
+$ sudo add-apt-repository \
+> “deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+> $(lsb_release -cs) \
+> stable”
+
+
+If there is an error when you enter the above lines then copy and pasting in the entire highlighted line below should resolve the error:
+https://askubuntu.com/questions/989881/error-deb-arch-amd64-https-download-docker-com-linux-ubuntu-xenial-sta
+
+
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+
+
+
+6. Run the update again to reflect the changes
+$ sudo apt-get update
+
+
+
+
+7. Install Docker
+Ce means community edition. This is the free edition.
+$ sudo apt-get install docker-ce
+
+
+8. Verify that the installation was successful
+This will run a container called hello-world, which will only be possible if the docker installation was successful.
+$ sudo docker run hello-world
+
+
+
+How to install Docker Compose
+
+
+Udemy Free Docker Essentials Course
+Section 6
+Lesson 36: Demo - Installing Docker Compose on Linux
+https://www.udemy.com/course/docker-essentials/
+
+
+
+
+1. Fetch the binaries of docker compose from its official github release. We will store this on our machine.
+(Copy and paste the entire line.)
+
+
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o/usr/local/bin/docker-compose
+
+
+2. Make the binaries executable
+$ sudo chmod +x /usr/local/bin/docker-compose
+
+
+3. Check if the installation was successful
+$ docker-compose --version
+
+
+
+
+The End.
