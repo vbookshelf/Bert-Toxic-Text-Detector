@@ -27,6 +27,8 @@ https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification
 
 ### Server Deployment
 
+I suggest that you deploy on a Linux server running Ubuntu 16.04. Start with a server that has 4GB of RAM and two CPUs. Once you get the app running you can then test it on smaller and cheaper servers.
+
 All the frontend and backend code is available in this repo. The model is not included because it was too large to upload. It can be downloaded by following the Kaggle notebook link above. Please put the model inside the subfolder called 'flask' before uploading the entire Toxic Comment Detector folder to your server.
 
 The code is set up to be run as a Docker container. It's based on this video tutorial:
